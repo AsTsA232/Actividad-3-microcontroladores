@@ -1,1 +1,3 @@
 # Actividad-3-microcontroladores
+
+Escriba un programa en lenguaje C (usando KEIL o su entorno de programación en Linux), que haga girar 2 servomotores, uno conectado al canal 1 del timer2yotro conectado al canal 1deltimer3, de acuerdo con la siguiente secuencia: primero deberá girar un servomotor de 0o–90º–180ºy detenerse, luego girará el otro servo motor de 0o–90º–180ºy detenerse; posteriormente girará el primero de 180o–90º–0ºy detenerse y luego el segundo de 180o–90º–0ºy detenerse. El ciclo deberá repetirse indefinidamente.Para realizar los movimientos, considere los siguientes valores para el ancho de pulso
