@@ -34,7 +34,7 @@ RCC->APB1ENR |= (1 << 0);	//enable TIM3 clk
 	TIM3->CR1		|=	(1 << 0); //enable timer
 }
 
-//0°->90°->180°
+//0Â°->90Â°->180Â°
 void motoruno1(){
 
 		for (volatile int i = 0;i < 100;i++)
@@ -58,7 +58,7 @@ void motoruno1(){
 
 
 
-//180°->90°->0°
+//180Â°->90Â°->0Â°
 void motoruno2(){
 	
 		for (volatile int i = 0;i < 100;i++)
@@ -84,50 +84,52 @@ void motoruno2(){
 
 	
 	
-//0°->90°->180°
+//0Â°->90Â°->180Â°
 	void motordos1(){
 		//SEGUNDO MOTOR TIMER 3
 	
 		for (volatile int i = 0;i < 100;i++)
 			{
-				TIM2->CCR2 = 1800;
+				TIM3->CCR2 = 1800;
 				for (int j = 0;j < 65453;j++);
 			}
 
 		for (volatile int i = 100;i > 0;i--)
 			{
-				TIM2->CCR2 = 3857;
+				TIM3->CCR2 = 3857;
 				for (int j = 0;j < 65453;j++);
 			}
 			
 			for (volatile int i = 0;i < 100;i++)
 			{
-				TIM2->CCR2 = 5914;
+				TIM3->CCR2 = 5914;
 				for (int j = 0;j < 65453;j++);
 			}
 	}
 
 
 	
-	//180°->90°->0°
+	//180Â°->90Â°->0Â°
 	void motordos2(){
 	for (volatile int i = 0;i < 100;i++)
 			{
-				TIM2->CCR2 = 5914;
+				TIM3->CCR2 = 5914;
 				for (int j = 0;j < 65453;j++);
 			}
 
 		for (volatile int i = 100;i > 0;i--)
 			{
-				TIM2->CCR2 = 3857;
+				TIM3->CCR2 = 3857;
 				for (int j = 0;j < 65453;j++);
 			}
 			
 			for (volatile int i = 0;i < 100;i++)
 			{
-				TIM2->CCR2 = 1800;
+				TIM3->CCR2 = 1800;
 				for (int j = 0;j < 65453;j++);
 			}
 		
 	}
+	
+
 	
