@@ -9,8 +9,7 @@ Memory and bus architecture (p.46)
 
 int main(void){
 	init_gpio();
-	inictim2();
-	inictim3();
+	
 	while(1){
 		motoruno1();
 		for (int j = 0;j < 65453;j++);
@@ -21,8 +20,8 @@ int main(void){
 		motoruno2();
 		for (int j = 0;j < 65453;j++);
 		
-		motordos2();
-		for (int j = 0;j < 65453;j++);
+		//motordos2();
+	//for (int j = 0;j < 65453;j++);
 		
 	}
 }
